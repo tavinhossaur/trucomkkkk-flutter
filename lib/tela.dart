@@ -288,6 +288,31 @@ class _MyHomePageState extends State<MyHomePage> {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
+                    ElevatedButton(
+                      onPressed: () {
+                        setState(() {
+                          _ptsNos > 0 ? _ptsNos-- : null;
+                          _desabilitadoNos ? _desabilitadoNos = false : null;
+                        });
+                      },
+                      style: ButtonStyle(
+                        backgroundColor: Tema.tema.value == Brightness.dark
+                            ? const MaterialStatePropertyAll(Color(0xFF202020))
+                            : const MaterialStatePropertyAll(Colors.white),
+                        shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(50))),
+                        elevation: MaterialStateProperty.all(2),
+                      ),
+                      child: Text(
+                        '-1',
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500,
+                            color: Tema.tema.value == Brightness.dark
+                                ? Colors.white
+                                : Colors.indigo),
+                      ),
+                    ),
                     Text(
                       '$_ptsNos',
                       style: const TextStyle(
@@ -390,6 +415,31 @@ class _MyHomePageState extends State<MyHomePage> {
                   // horizontal).
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
+                    ElevatedButton(
+                      onPressed: () {
+                        setState(() {
+                          _ptsEles > 0 ? _ptsEles-- : null;
+                          _desabilitadoEles ? _desabilitadoEles = false : null;
+                        });
+                      },
+                      style: ButtonStyle(
+                        backgroundColor: Tema.tema.value == Brightness.dark
+                            ? const MaterialStatePropertyAll(Color(0xFF202020))
+                            : const MaterialStatePropertyAll(Colors.white),
+                        shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(50))),
+                        elevation: MaterialStateProperty.all(2),
+                      ),
+                      child: Text(
+                        '-1',
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500,
+                            color: Tema.tema.value == Brightness.dark
+                                ? Colors.white
+                                : Colors.indigo),
+                      ),
+                    ),
                     Text(
                       '$_ptsEles',
                       style: const TextStyle(
