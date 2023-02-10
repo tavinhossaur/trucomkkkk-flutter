@@ -1,6 +1,6 @@
 # trucomkkkk
 
-A new Flutter project.
+A point counter for truco matches in Flutter.
 
 ## Getting Started
 
